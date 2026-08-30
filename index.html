@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hijabi Bakes | Fresh From Our Oven to Your Heart</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts for Bakery Aesthetics -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Announcement Bar -->
+    <div id="announcement-bar" class="announcement-bar">
+        <p id="announcement-text">✨ 100% Pure Eggless Bakes • Baked Fresh from Scratch • Order Prior! ✨</p>
+    </div>
+
+    <!-- Header & Navigation -->
+    <header class="site-header">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <span class="logo-icon">🍰</span>
+                <span id="nav-shop-name">Hijabi Bakes</span>
+            </a>
+            <nav class="main-nav" id="mainNav">
+                <a href="#hero">Home</a>
+                <a href="#about">About</a>
+                <a href="#menu">Menu</a>
+                <a href="#best-sellers">Best Sellers</a>
+                <a href="#order-section">Order Now</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <div class="header-actions">
+                <a href="#order-section" class="btn btn-primary btn-sm">Place Order</a>
+                <button class="mobile-menu-toggle" id="menuToggle" aria-label="Toggle Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <span class="badge">Handcrafted with Love 💝</span>
+                    <h1 id="hero-title">Where Sweetness Meets Warmth</h1>
+                    <p id="hero-subtitle">Baking from scratch with zero preservatives. Custom cakes, decadent brownies, gooey cookies, and celebration treats delivered fresh in Rajahmundry.</p>
+                    <div class="hero-buttons">
+                        <a href="#order-section" class="btn btn-primary">Order via WhatsApp / Insta</a>
+                        <a href="#menu" class="btn btn-secondary">Explore Menu</a>
+                    </div>
+                    <div class="hero-features">
+                        <div class="feature-item"><span>✨</span> 100% Eggless</div>
+                        <div class="feature-item"><span>🧁</span> Freshly Baked</div>
+                        <div class="feature-item"><span>📦</span> Custom Boxes</div>
+                    </div>
+                </div>
+                <div class="hero-image-wrapper">
+                    <div class="hero-card-badge">⭐ 4.9 Rating (200+ Reviews)</div>
+                    <div class="image-stack">
+                        <div class="stack-card main-card">
+                            <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=600&q=80" alt="Delicious Chocolate Truffle Cake" class="hero-real-img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section section-padding">
+            <div class="container about-container">
+                <div class="about-image">
+                    <div class="about-frame">
+                        <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=600&q=80" alt="Fresh artisan baked pastries and breads" class="about-real-img">
+                    </div>
+                </div>
+                <div class="about-content">
+                    <span class="section-subtitle">Our Sweet Story</span>
+                    <h2>Made From Scratch, Baked For Your Heart</h2>
+                    <p>At Hijabi Bakes, every single treat is whipped up with passion, precision, and pure ingredients. We believe that homemade baking tastes better because it carries warmth and care.</p>
+                    <ul class="about-checklist">
+                        <li>✔️ 100% Pure Eggless options across all categories</li>
+                        <li>✔️ Zero artificial preservatives or additives</li>
+                        <li>✔️ Crafted fresh per order to guarantee peak flavor</li>
+                        <li>✔️ Customizable designs for birthdays, anniversaries, and milestones</li>
+                    </ul>
+                    <div class="owner-tag">
+                        <span class="owner-icon">👩‍🍳</span>
+                        <div>
+                            <strong>Handmade Daily</strong>
+                            <p>Pre-orders recommended to ensure fresh preparation!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Best Sellers Section -->
+        <section id="best-sellers" class="best-sellers-section section-padding bg-soft">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-subtitle">Crowd Favorites</span>
+                    <h2>Our Signature Treats</h2>
+                    <p>The most loved creations requested by our sweet-toothed community.</p>
+                </div>
+                <div class="grid-3" id="best-sellers-grid">
+                    <!-- Populated dynamically via script.js -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Menu Section (Enhanced with Live Search & Filters) -->
+        <section id="menu" class="menu-section section-padding">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-subtitle">Explore Our Offerings</span>
+                    <h2>The Menu & Pricing</h2>
+                    <p>Search or filter items to easily build your custom order.</p>
+                </div>
+                
+                <!-- Search & Category Controls -->
+                <div class="menu-controls-wrapper">
+                    <div class="search-box">
+                        <span class="search-icon">🔍</span>
+                        <input type="text" id="menuSearchInput" placeholder="Search cakes, brownies, cookies...">
+                    </div>
+                    <div class="menu-filters" id="menuFilters">
+                        <button class="filter-btn active" data-category="all">All Items</button>
+                        <button class="filter-btn" data-category="Cakes">Cakes</button>
+                        <button class="filter-btn" data-category="Cupcakes">Cupcakes</button>
+                        <button class="filter-btn" data-category="Pastries">Pastries</button>
+                        <button class="filter-btn" data-category="Brownies">Brownies</button>
+                        <button class="filter-btn" data-category="Cookies">Cookies</button>
+                    </div>
+                </div>
+
+                <!-- Menu Cards Grid -->
+                <div class="grid-3" id="menu-grid">
+                    <!-- Populated dynamically via script.js -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Order Section / Form -->
+        <section id="order-section" class="order-section section-padding bg-soft">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-subtitle">Quick & Easy Checkout</span>
+                    <h2>Place Your Custom Order</h2>
+                    <p>Build your order below and send it instantly via WhatsApp or Instagram DM!</p>
+                </div>
+
+                <div class="order-card-wrapper">
+                    <form id="bakeryOrderForm" class="order-form">
+                        
+                        <!-- Customer Details Group -->
+                        <div class="form-group-grid">
+                            <div class="input-group">
+                                <label for="customerName">Your Name *</label>
+                                <input type="text" id="customerName" required placeholder="e.g. Ayesha Fatima">
+                            </div>
+                            <div class="input-group">
+                                <label for="customerPhone">Phone Number / WhatsApp *</label>
+                                <input type="tel" id="customerPhone" required placeholder="e.g. 9876543210">
+                            </div>
+                        </div>
+
+                        <div class="form-group-grid">
+                            <div class="input-group">
+                                <label for="orderDate">Preferred Date of Delivery/Pickup *</label>
+                                <input type="date" id="orderDate" required>
+                            </div>
+                            <div class="input-group">
+                                <label for="fulfillmentType">Fulfillment Option *</label>
+                                <select id="fulfillmentType" required>
+                                    <option value="Pickup">Store Pickup (Rajahmundry)</option>
+                                    <option value="Delivery">Local Delivery (Charges apply)</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="input-group">
+                            <label>Preferred Platform to Send Order *</label>
+                            <div class="platform-radios">
+                                <label class="radio-card">
+                                    <input type="radio" name="contactMethod" value="whatsapp" checked>
+                                    <span class="radio-content">
+                                        <i>🟢</i> WhatsApp Direct Chat
+                                    </span>
+                                </label>
+                                <label class="radio-card">
+                                    <input type="radio" name="contactMethod" value="instagram">
+                                    <span class="radio-content">
+                                        <i>📸</i> Instagram DM
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <hr class="form-divider">
+
+                        <!-- Improved Dynamic Items Selection Area -->
+                        <div class="order-items-container">
+                            <div class="order-items-header">
+                                <h3>Select Products & Quantities</h3>
+                                <button type="button" id="addItemRowBtn" class="btn btn-outline btn-sm">+ Add Another Item</button>
+                            </div>
+                            
+                            <div id="dynamicRowsContainer">
+                                <!-- Dynamic rows inserted by script with real-time pricing calculation -->
+                            </div>
+                        </div>
+
+                        <div class="input-group mt-3">
+                            <label for="customNotes">Customization Notes & Instructions</label>
+                            <textarea id="customNotes" rows="3" placeholder="Mention flavor preference, eggless confirmation, message on cake, color theme, or specific delivery address..."></textarea>
+                        </div>
+
+                        <!-- Live Order Total Summary Box -->
+                        <div class="order-summary-box">
+                            <div class="summary-row">
+                                <span>Estimated Total Items:</span>
+                                <strong id="summaryItemCount">0</strong>
+                            </div>
+                            <div class="summary-row total-price-row">
+                                <span>Estimated Price:</span>
+                                <strong id="summaryTotalPrice">₹0</strong>
+                            </div>
+                            <p class="summary-note">* Final confirmation and delivery details will be finalized over chat.</p>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-block btn-lg">Generate & Send Order 🚀</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials / Reviews Section -->
+        <section class="testimonials-section section-padding">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-subtitle">Customer Love</span>
+                    <h2>Kind Words From Our Family</h2>
+                    <p>Real feedback from our happy dessert lovers.</p>
+                </div>
+                <div class="grid-3">
+                    <div class="testimonial-card">
+                        <div class="stars">⭐⭐⭐⭐⭐</div>
+                        <p>"The truffle cake was absolute perfection! Not overly sweet, incredibly moist, and completely eggless. Everyone at the party raved about it."</p>
+                        <h5>— Srivani K.</h5>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="stars">⭐⭐⭐⭐⭐</div>
+                        <p>"Ordered the assorted brownie box and nutella cookies. The packaging was stunning, and the taste was pure heaven. Will order again!"</p>
+                        <h5>— Rajesh V.</h5>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="stars">⭐⭐⭐⭐⭐</div>
+                        <p>"Super easy ordering process and she customized the superhero cake precisely as requested. Thank you Hijabi Bakes!"</p>
+                        <h5>— Sneha R.</h5>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact & Location Section -->
+        <section id="contact" class="contact-section section-padding bg-soft">
+            <div class="container contact-container">
+                <div class="contact-info">
+                    <span class="section-subtitle">Get In Touch</span>
+                    <h2>We’d Love To Bake For You</h2>
+                    <p>Have questions about custom themes, bulk party orders, or dietary requirements? Drop us a message!</p>
+                    
+                    <div class="contact-info-list">
+                        <div class="contact-item">
+                            <i>📍</i>
+                            <div>
+                                <strong>Location</strong>
+                                <p id="config-location">Rajahmundry, Andhra Pradesh</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i>⏰</i>
+                            <div>
+                                <strong>Opening Hours</strong>
+                                <p id="config-hours">Mon - Sat: 10:00 AM - 8:00 PM (Order Prior)</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i>💌</i>
+                            <div>
+                                <strong>Direct Contact</strong>
+                                <p id="config-phone-display">+91 98765 43210 (WhatsApp / DM)</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="social-buttons">
+                        <a id="whatsappBtnLink" href="#" target="_blank" class="btn btn-whatsapp">Chat on WhatsApp</a>
+                        <a id="instagramBtnLink" href="#" target="_blank" class="btn btn-instagram">Visit Instagram</a>
+                    </div>
+                </div>
+
+                <div class="map-wrapper">
+                    <div class="map-card">
+                        <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&w=600&q=80" alt="Map Location Background" class="map-real-img">
+                        <div class="map-overlay-content">
+                            <h3>Rajahmundry Based Homebaker</h3>
+                            <p>Pickup & local delivery options available.</p>
+                            <a id="mapLinkBtn" href="#" target="_blank" class="btn btn-outline btn-sm">Open in Google Maps</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <span class="logo-icon">🍰</span>
+                <span id="footer-shop-name">Hijabi Bakes</span>
+                <p>100% Pure Eggless • Baked Fresh from Scratch • No Preservatives</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <a href="#about">About Us</a>
+                <a href="#menu">Our Menu</a>
+                <a href="#order-section">Place Order</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="footer-social">
+                <h4>Connect</h4>
+                <a id="footerWhatsapp" href="#" target="_blank">WhatsApp Chat</a>
+                <a id="footerInstagram" href="#" target="_blank">Instagram Profile</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Hijabi Bakes. All rights reserved. Crafted with care.</p>
+        </div>
+    </footer>
+
+    <!-- Floating Sticky Action Buttons -->
+    <div class="floating-cta">
+        <a id="floatingWhatsapp" href="#" target="_blank" class="float-btn float-wa" aria-label="WhatsApp Chat" title="Chat on WhatsApp">
+            <span>💬</span>
+        </a>
+        <a id="floatingInstagram" href="#" target="_blank" class="float-btn float-ig" aria-label="Instagram Profile" title="Visit Instagram">
+            <span>📸</span>
+        </a>
+    </div>
+
+    <!-- External Script File -->
+    <script src="script.js"></script>
+</body>
+</html>
